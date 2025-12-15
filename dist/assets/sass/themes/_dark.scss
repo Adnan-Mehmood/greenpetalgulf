@@ -1,0 +1,82 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+
+// ------------------------------------
+// Dark Mode Styles
+// ------------------------------------
+
+body.dark-mode {
+  background-color: $color-dark-bg;
+  color: $color-dark-text;
+
+  a {
+    color: theme-color("primary-light");
+    &:hover,
+    &:focus {
+      color: theme-color("primary-lighter");
+    }
+  }
+
+  // Invert card backgrounds and shadows
+  .card {
+    background-color: $color-dark-card-bg;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+
+    &__header,
+    &__body,
+    &__footer {
+      color: $color-dark-text;
+    }
+  }
+
+  // Buttons - dark mode variants
+  .button {
+    background-color: theme-color("primary-dark");
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      background-color: theme-color("primary-darker");
+      color: $color-white;
+    }
+  }
+
+  // Form elements
+  input,
+  textarea,
+  select {
+    background-color: $color-dark-input-bg;
+    border-color: $color-dark-border;
+    color: $color-dark-text;
+
+    &:focus {
+      border-color: theme-color("primary-light");
+      box-shadow: 0 0 0 3px rgba(theme-color("primary-light-rgb"), 0.4);
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $color-dark-muted;
+    }
+  }
+
+  // Modal background darkening
+  .modal {
+    background-color: rgba(0, 0, 0, 0.85);
+
+    &__content {
+      background-color: $color-dark-card-bg;
+      color: $color-dark-text;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+    }
+
+    &__close {
+      color: $color-dark-muted;
+
+      &:hover,
+      &:focus {
+        color: theme-color("primary-light");
+      }
+    }
+  }
+}

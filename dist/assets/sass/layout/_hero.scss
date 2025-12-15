@@ -1,0 +1,43 @@
+@use "../utilities/border" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/flexbox" as *;
+@use "../abstracts/size" as *;
+@use "../abstracts/font" as *;
+@use "../abstracts/variables" as *;
+
+.hero {
+  background-color: theme-color("primary");
+
+  &__content {
+    padding: 6rem 2rem;
+    color: theme-color("white");
+    max-width: 610px;
+    margin-inline-start: auto;
+
+    @media (max-width: 479.98px) {
+      padding: 2rem 2rem;
+    }
+
+    h1 {
+      @include font(80px, bold, 120%, 0.57px);
+      margin-bottom: 0;
+      color: rgba(255, 244, 220, 1);
+
+      @media (max-width: 767.98px) {
+        font-size: 50px;
+      }
+
+      @media (max-width: 479.98px) {
+        font-size: 40px;
+      }
+    }
+  }
+
+  &__slider {
+    padding-top: 6rem;
+
+    @media (max-width: 479.98px) {
+      padding-top: 1rem;
+    }
+  }
+}

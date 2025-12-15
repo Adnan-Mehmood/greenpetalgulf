@@ -1,0 +1,148 @@
+/*** 
+
+====================================================================
+    Search Popup
+====================================================================
+
+***/
+
+.search-popup {
+  position: fixed;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  visibility: hidden;
+  opacity: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-transform: translateY(101%);
+  -ms-transform: translateY(101%);
+  transform: translateY(101%);
+  transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -webkit-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+}
+
+.search-popup.popup-visible {
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  visibility: visible;
+  opacity: 1;
+}
+
+.search-popup .overlay-layer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+}
+
+.search-popup .close-search {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font-size: 22px;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.search-popup .close-search:hover {
+  opacity: 0.7;
+}
+
+.search-popup .search-form {
+  position: relative;
+  padding: 0px 15px 0px;
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  transition: all 900ms ease;
+  -moz-transition: all 900ms ease;
+  -webkit-transition: all 900ms ease;
+  -ms-transition: all 900ms ease;
+  -o-transition: all 900ms ease;
+}
+
+.search-popup .search-form fieldset {
+  position: relative;
+  border: 7px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+}
+
+.search-popup .search-form fieldset input[type="search"] {
+  position: relative;
+  height: 70px;
+  padding: 20px 220px 20px 30px;
+  background: #ffffff;
+  line-height: 30px;
+  font-size: 24px;
+  color: #233145;
+  border-radius: 7px;
+}
+
+.search-popup .search-form fieldset input[type="submit"] {
+  position: absolute;
+  display: block;
+  right: 0px;
+  top: 0px;
+  text-align: center;
+  width: 220px;
+  height: 70px;
+  padding: 20px 10px 20px 10px;
+  color: #ffffff !important;
+  line-height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 0px 7px 7px 0px;
+}
+
+.search-popup h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  display: none;
+}
+
+.search-popup .recent-searches {
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  display: none;
+}
+
+.search-popup .recent-searches li {
+  display: inline-block;
+  margin: 0px 10px 10px 0px;
+}
+
+.search-popup .recent-searches li a {
+  display: block;
+  line-height: 24px;
+  border: 1px solid #ffffff;
+  padding: 7px 15px;
+  color: #ffffff;
+  border-radius: 3px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.search-popup .search-form fieldset input[type="search"]:focus {
+  border-color: #ddd;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

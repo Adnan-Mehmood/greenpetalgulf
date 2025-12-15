@@ -1,0 +1,103 @@
+/* Our Facts section */
+
+.our-facts-section {
+  position: relative;
+  padding: 120px 0 90px;
+}
+
+.our-facts-section .sec-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #212121;
+}
+
+.our-facts-section .sec-bg .left-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 56%;
+  background-size: cover;
+}
+
+.our-facts-section .sec-bg .right-side {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 44%;
+  background-size: cover;
+}
+
+.facts-block {
+  position: relative;
+}
+
+.facts-block .inner {
+  position: relative;
+  background-color: #fff;
+  padding: 27px;
+  padding-left: 157px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.facts-block .icon {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 86px;
+  height: 86px;
+  text-align: center;
+  line-height: 82px;
+}
+
+.facts-block .count-box {
+  position: relative;
+  font-size: 72px;
+  font-weight: 800;
+  margin-bottom: 0;
+  line-height: 79px;
+}
+
+.facts-block .text {
+  position: relative;
+  font-size: 20px;
+  color: #212121;
+  margin-bottom: 6px;
+}
+
+/*  */
+.facts-block.style-two .inner {
+  padding: 16px 30px;
+  padding-left: 90px;
+}
+
+.facts-block.style-two .icon {
+  color: #212121;
+  font-size: 45px;
+  border: 0;
+  left: 26px;
+  top: 21px;
+  text-align: left;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+}
+
+.facts-block.style-two .count-box {
+  color: #212121;
+  font-size: 60px;
+  line-height: 70px;
+}
+
+.facts-block.style-two .inner:before {
+  position: absolute;
+  content: "";
+  left: 14px;
+  bottom: -50px;
+  border: 30px solid transparent;
+}

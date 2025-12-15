@@ -1,0 +1,52 @@
+// ------------------------------------
+// Bootstrap Overrides
+// ------------------------------------
+
+// Import Bootstrap variables first (make sure Bootstrap SCSS is installed)
+// @import "~bootstrap/scss/functions";
+// @import "~bootstrap/scss/variables";
+
+// // Override Bootstrap variables here before importing rest of Bootstrap (if using SCSS build process)
+// // Example:
+// $primary: theme-color("primary") !default;
+// $body-bg: $color-body-bg !default;
+// $font-family-base: $font-family-sans-serif !default;
+// $border-radius: $border-radius !default;
+// $btn-border-radius: $border-radius !default;
+// $btn-primary-bg: $primary !default;
+// $btn-primary-border: $primary !default;
+
+// // Import Bootstrap itself or rest of Bootstrap after overrides
+// // @import "~bootstrap/scss/bootstrap";
+
+// // Custom overrides for Bootstrap classes
+
+// // Buttons
+// .btn-primary {
+//   background-color: $primary !important;
+//   border-color: $primary !important;
+//   &:hover,
+//   &:focus {
+//     background-color: darken($primary, 10%) !important;
+//     border-color: darken($primary, 10%) !important;
+//   }
+// }
+
+// // Forms
+// .form-control {
+//   border-radius: $border-radius !important;
+//   border-color: $color-border !important;
+//   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+//   &:focus {
+//     border-color: theme-color("primary") !important;
+//     box-shadow: 0 0 0 0.2rem rgba(theme-color("primary-rgb"), 0.25) !important;
+//   }
+// }
+
+// // Alerts
+// .alert-primary {
+//   background-color: lighten($primary, 40%) !important;
+//   color: darken($primary, 20%) !important;
+//   border-color: lighten($primary, 50%) !important;
+// }

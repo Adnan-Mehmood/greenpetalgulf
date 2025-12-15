@@ -1,0 +1,40 @@
+/*** 
+
+====================================================================
+                Sticky Header
+====================================================================
+
+***/
+
+.sticky-header {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  padding: 0px 0px;
+  z-index: -1;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  -webkit-transition: top 300ms ease;
+  -o-transition: top 300ms ease;
+  transition: top 300ms ease;
+}
+
+.sticky-header .main-menu .navigation {
+  margin-left: 0;
+}
+
+.fixed-header .sticky-header {
+  opacity: 1;
+  z-index: 99901;
+  visibility: visible;
+}
+
+.main-header .sticky-header .header-lower .wrapper-box {
+  padding-left: 0;
+}

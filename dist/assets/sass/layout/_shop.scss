@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/font" as *;
+@use "../abstracts/flexbox" as *;
+
+.shop {
+  &-section {
+    position: relative;
+    padding: 64px 0;
+    display: block;
+    width: 100%;
+    color: theme-color("black");
+    background-color: #ffefce;
+
+    h2,
+    p {
+      margin: 0;
+    }
+
+    h2 {
+      @include font(60px, 600, 150%, normal);
+      position: relative;
+      display: block;
+
+      @media (max-width: 479.98px) {
+        font-size: 40px;
+      }
+    }
+
+    p {
+      @include font(17px, 400, 150%, normal);
+      position: relative;
+      display: block;
+    }
+  }
+
+  &__wrap {
+    @include flexbox(column, flex-start, flex-start, wrap);
+    gap: 30px;
+  }
+
+  &__content {
+    @include flexbox(column, flex-start, flex-start, wrap);
+    gap: 10px;
+  }
+
+  &__image {
+    margin-top: 2rem;
+  }
+}

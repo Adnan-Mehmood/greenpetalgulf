@@ -1,0 +1,211 @@
+// ------------------------------------
+// Flexbox Utilities + Mixins
+// ------------------------------------
+
+// ------------------------------------
+// 🎯 FLEXBOX MIXINS
+// ------------------------------------
+
+// Mixin: Basic Flex Setup
+@mixin flexbox(
+  $direction: row,
+  $justify: flex-start,
+  $align: stretch,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+// Mixin: Inline Flex Setup
+@mixin inline-flexbox(
+  $direction: row,
+  $justify: flex-start,
+  $align: stretch,
+  $wrap: nowrap
+) {
+  display: inline-flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+// Mixin: Flex Container with Gap
+@mixin flexbox-gap($gap: 1rem) {
+  display: flex;
+  gap: $gap;
+}
+
+// Mixin: Responsive Flex Direction
+@mixin flex-responsive($mobile: column, $desktop: row) {
+  flex-direction: $mobile;
+
+  @media (min-width: 768px) {
+    flex-direction: $desktop;
+  }
+}
+
+// Mixin: Center All (Horizontally & Vertically)
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin: Auto Flex Grow Item
+@mixin flex-item($grow: 1, $shrink: 1, $basis: auto) {
+  flex-grow: $grow;
+  flex-shrink: $shrink;
+  flex-basis: $basis;
+}
+
+// 🔁 Basic Utility Classes (as before)
+// Display Flex
+.flex {
+  display: flex !important;
+}
+.inline-flex {
+  display: inline-flex !important;
+}
+
+// Flex Direction
+.flex-row {
+  flex-direction: row !important;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+.flex-column {
+  flex-direction: column !important;
+}
+.flex-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
+// Flex Wrap
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+
+// Justify Content
+.justify-start {
+  justify-content: flex-start !important;
+}
+.justify-end {
+  justify-content: flex-end !important;
+}
+.justify-center {
+  justify-content: center !important;
+}
+.justify-between {
+  justify-content: space-between !important;
+}
+.justify-around {
+  justify-content: space-around !important;
+}
+.justify-evenly {
+  justify-content: space-evenly !important;
+}
+
+// Align Items
+.items-start {
+  align-items: flex-start !important;
+}
+.items-end {
+  align-items: flex-end !important;
+}
+.items-center {
+  align-items: center !important;
+}
+.items-baseline {
+  align-items: baseline !important;
+}
+.items-stretch {
+  align-items: stretch !important;
+}
+
+// Align Content (for multi-line flex)
+.content-start {
+  align-content: flex-start !important;
+}
+.content-end {
+  align-content: flex-end !important;
+}
+.content-center {
+  align-content: center !important;
+}
+.content-between {
+  align-content: space-between !important;
+}
+.content-around {
+  align-content: space-around !important;
+}
+.content-stretch {
+  align-content: stretch !important;
+}
+
+// Align Self (individual item control)
+.self-start {
+  align-self: flex-start !important;
+}
+.self-end {
+  align-self: flex-end !important;
+}
+.self-center {
+  align-self: center !important;
+}
+.self-baseline {
+  align-self: baseline !important;
+}
+.self-stretch {
+  align-self: stretch !important;
+}
+
+// Gap Utilities
+.gap-xs {
+  gap: 0.25rem !important;
+}
+.gap-sm {
+  gap: 0.5rem !important;
+}
+.gap-md {
+  gap: 1rem !important;
+}
+.gap-lg {
+  gap: 1.5rem !important;
+}
+.gap-xl {
+  gap: 2rem !important;
+}
+
+// Responsive (Mobile First Example)
+@media (min-width: 768px) {
+  .flex-md {
+    display: flex !important;
+  }
+  .flex-row-md {
+    flex-direction: row !important;
+  }
+  .flex-column-md {
+    flex-direction: column !important;
+  }
+  .justify-center-md {
+    justify-content: center !important;
+  }
+  .items-center-md {
+    align-items: center !important;
+  }
+  .gap-md {
+    gap: 1rem !important;
+  }
+}

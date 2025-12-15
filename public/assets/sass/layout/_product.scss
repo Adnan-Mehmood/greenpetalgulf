@@ -1,0 +1,215 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/font" as *;
+@use "../abstracts/position" as *;
+@use "../abstracts/flexbox" as *;
+@use "../abstracts/size" as *;
+@use "../abstracts/transition" as *;
+@use "../utilities/border" as *;
+
+.product {
+  &-section {
+    position: relative;
+    display: block;
+    background-color: theme-color("yellow-200");
+    padding: 36px 0;
+
+    .sub-head {
+      max-width: 1620px;
+      margin-inline: auto;
+      padding: 0 4rem;
+      width: 100%;
+      @include flexbox(row, space-between, center, wrap);
+      gap: 1rem;
+
+      @media (max-width: 479.98px) {
+        padding: 0;
+      }
+
+      h2 {
+        @include font(45px, 500, 120%, 0.27px);
+        margin-bottom: 0;
+
+        @media (max-width: 479.98px) {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .swiper {
+      &__buttons {
+        position: relative;
+        @include flexbox(row, flex-start, flex-start, wrap);
+        gap: 1rem;
+      }
+
+      &-button-prev,
+      &-button-next {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        margin: 0;
+        @include size(auto);
+        padding: 0;
+        // @include size(44px);
+        // @include inline-flexbox(row, center, center);
+        color: theme-color("black");
+        // background-color: theme-color("black");
+
+        svg {
+          @include size(32px);
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+
+      &-button-prev {
+        svg {
+          rotate: 180deg;
+        }
+      }
+    }
+  }
+
+  &__wrap {
+    @include flexbox(column, flex-start, flex-start, wrap);
+    gap: 3rem;
+    width: 100%;
+  }
+
+  &__slider {
+    width: 100%;
+  }
+
+  &__card {
+    position: relative;
+    display: block;
+
+    h3 {
+      @include font(24px, 500, 120%, 0.27px);
+      margin-bottom: 0;
+
+      @media (max-width: 479.98px) {
+        font-size: 18px;
+      }
+    }
+
+    &:hover {
+      .product__card-inner {
+        .product__card-img {
+          //   transform: scale(0.98);
+          scale: 1;
+        }
+
+        .product__card-motion--reduce {
+          transform: translateX(0);
+        }
+
+        .product__card-quickview {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+
+      .product__card-tag {
+        top: 10px;
+        left: 10px;
+      }
+    }
+
+    &-inner {
+      position: relative;
+    }
+
+    &-tag {
+      @include set-position(absolute, 5px, null, null, 5px);
+      z-index: 1;
+      padding: 0.5rem 0.8rem;
+      background-color: theme-color("primary");
+      color: theme-color("white");
+      @include font(12px, 400, 100%, normal);
+      text-transform: uppercase;
+      @include border-radius(0.2rem);
+      @include transition(all, 0.6s);
+
+      &-text {
+        display: inline-block;
+        line-height: 1.2;
+      }
+    }
+
+    &-image {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1;
+
+      img {
+        @include size(100%, 100%);
+        object-fit: cover;
+        object-position: center;
+        @include transition(all, 0.5s);
+        @include set-position(absolute, 0, 0, 0, 0);
+        scale: 1.01;
+      }
+    }
+
+    &-motion--reduce {
+      transform: translateX(100%);
+      scale: 1;
+    }
+
+    &-quickview {
+      @include set-position(absolute, 50%, null, null, 50%);
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      width: 100%;
+      text-align: center;
+      @include flexbox(column, center, center, wrap);
+      gap: 0.8rem;
+      opacity: 0;
+      pointer-events: none;
+      @include transition(all, 0.6s);
+
+      @media (max-width: 479.98px) {
+        display: none;
+      }
+
+      .btn {
+        font-size: 14px;
+        padding: 0.8rem 1.4rem;
+        min-width: auto;
+
+        &:hover {
+          padding: 0.8rem 1.6rem;
+        }
+      }
+    }
+
+    &-body {
+      padding: 2.5rem 1rem;
+      text-align: center;
+      @include flexbox(column, center, center, wrap);
+      gap: 0.8rem;
+    }
+
+    &-price {
+      @include font(14px, 500, 120%, 0.27px);
+      margin-bottom: 0;
+
+      span {
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
+
+      .sale__price {
+        font-size: 12px;
+        margin-right: 0;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}

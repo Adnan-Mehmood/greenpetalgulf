@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/font" as *;
+@use "../abstracts/flexbox" as *;
+@use "../utilities/border" as *;
+@use "../abstracts/size" as *;
+@use "../abstracts/transition" as *;
+@use "../abstracts/position" as *;
+@use "../base/typography" as *;
+
+.marquee {
+  &-slider {
+    position: relative;
+    width: 100%;
+    background-color: rgb(255, 239, 206);
+
+    &--secondary {
+      background-color: rgb(255, 244, 220);
+    }
+
+    .swiper {
+      &-wrapper {
+        align-items: center;
+        -webkit-transition-timing-function: linear !important;
+        transition-timing-function: linear !important;
+        position: relative;
+      }
+
+      &-slide {
+        @include flexbox(row, center, center, wrap);
+        width: 200px;
+      }
+    }
+
+    .logo__brand {
+      @include max-size(100px, 100px);
+      @include flexbox(row, center, center, wrap);
+      @include size(100%);
+
+      img {
+        @include size(100%);
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as *;
+@use "sass:map";
+
+// ------------------------------------
+// px to rem converter
+// ------------------------------------
+@function px-to-rem($px, $base: 16) {
+  @return #{$px / $base}rem;
+}
+
+// ------------------------------------
+// Get Color From Theme Map
+// ------------------------------------
+// @function theme-color($color-name) {
+//   @return map-get($theme-colors, $color-name);
+// }
+
+@function theme-color($color-name) {
+  @return map.get($theme-colors, $color-name);
+}
+
+// ------------------------------------
+// Get Spacer Size
+// ------------------------------------
+@function spacer($key) {
+  @return map.get($spacers, $key);
+}
+
+// ------------------------------------
+// Strip Unit (for calculations)
+// ------------------------------------
+@function strip-unit($value) {
+  @if type-of($value) == "number" and unit($value) != "" {
+    @return $value / ($value * 0 + 1);
+  }
+  @return $value;
+}
+

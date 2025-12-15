@@ -1,0 +1,114 @@
+.header-upper .navbar-right-info {
+    position: relative;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-upper .navbar-right-info .sign-in {
+    position: relative;
+    font-size: 18px;
+    color: #212121;
+    font-weight: 500;
+    margin-right: 20px;
+    padding: 0 20px;
+}
+
+.header-upper .navbar-right-info .sign-in:before {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    content: '';
+    background: rgb(255 255 255 / 0.30);
+    height: 22px;
+    width: 1px;
+    transform: translateY(-50%);
+}
+
+.header-upper .navbar-right-info .sign-in:after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    content: '';
+    background: rgb(255 255 255 / 0.30);
+    height: 22px;
+    width: 1px;
+    transform: translateY(-50%);
+}
+
+.header-upper .navbar-right-info .sign-in a {
+    color: #fff;
+}
+
+.header-upper .navbar-right-info .sign-in a i {
+    margin-right: 10px;
+}
+
+/* Language Switcher */
+.header-upper #polyglotLanguageSwitcher {
+    background: transparent;
+}
+
+.header-upper #polyglotLanguageSwitcher a.current:link, 
+.header-upper #polyglotLanguageSwitcher a.current:visited, 
+.header-upper #polyglotLanguageSwitcher a.current:active {
+    background-position: left center;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 100px;
+}
+
+#polyglotLanguageSwitcher a {
+    padding: 0 9px;
+    width: 105px;
+}
+
+.header-upper .language .bootstrap-select .dropdown-toggle .filter-option:after {
+    display: none;
+}
+
+.header-upper .language form {
+    display: inline-block;
+}
+
+.header-upper .language button.btn.dropdown-toggle {
+    background: transparent;
+    color: #8d8d8d !important;
+    border: none;
+    padding-left: 7px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.header-upper .language .btn-light:not(:disabled):not(.disabled).active, 
+.header-upper .language .btn-light:not(:disabled):not(.disabled):active, 
+.header-upper .language .show>.btn-light.dropdown-toggle {
+    color: #fff;
+}
+
+.header-upper .language .bootstrap-select .dropdown-toggle:focus, 
+.header-upper .language .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.header-upper .language .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: auto;
+    min-width: 65px;
+}
+
+.header-upper .language .location .icon {
+    position: relative;
+    top: 2px;
+}
+
+.header-upper .bootstrap-select .dropdown-toggle .filter-option:after {
+    right: 0;
+}
+
+.header-upper .dropdown-item.active, 
+.header-upper .dropdown-item:active {
+    color: #fff;
+}

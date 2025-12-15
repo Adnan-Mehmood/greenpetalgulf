@@ -1,0 +1,57 @@
+// ------------------------------------
+// Positioning Mixins (_position.scss)
+// ------------------------------------
+
+/// Set position type (relative, absolute, fixed, sticky)
+/// @param {String} $type - Position type
+@mixin position($type: relative) {
+  position: $type;
+}
+
+/// Set position with optional offsets
+/// @param {String} $type - Position type (default: absolute)
+/// @param {Length} $top - Top value (null = ignore)
+/// @param {Length} $right - Right value
+/// @param {Length} $bottom - Bottom value
+/// @param {Length} $left - Left value
+@mixin set-position(
+  $type: absolute,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $type;
+
+  @if $top != null {
+    top: $top;
+  }
+  @if $right != null {
+    right: $right;
+  }
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+  @if $left != null {
+    left: $left;
+  }
+}
+
+/// Center element using absolute positioning
+@mixin position-center($x: true, $y: true) {
+  position: absolute;
+
+  @if $x {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if $y {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @if $x and $y {
+    transform: translate(-50%, -50%);
+  }
+}

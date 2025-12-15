@@ -1,0 +1,31 @@
+// ------------------------------------
+// Spacing Mixin (_spacer.scss)
+// ------------------------------------
+
+/// @mixin spacer
+/// Apply margin or padding dynamically
+/// @param {String} $property - 'margin' or 'padding'
+/// @param {String} $direction - 'top', 'bottom', 'left', 'right', 'x', 'y', or 'all'
+/// @param {Length} $value - Value to apply (e.g., 1rem, 10px)
+@mixin spacer($property, $direction: all, $value: 1rem) {
+  @if $direction == all {
+    #{$property}: $value;
+  } @else if $direction == x {
+    #{$property}-left: $value;
+    #{$property}-right: $value;
+  } @else if $direction == y {
+    #{$property}-top: $value;
+    #{$property}-bottom: $value;
+  } @else {
+    #{$property}-#{$direction}: $value;
+  }
+}
+
+/// Shortcut mixins
+@mixin margin($direction: all, $value: 1rem) {
+  @include spacer(margin, $direction, $value);
+}
+
+@mixin padding($direction: all, $value: 1rem) {
+  @include spacer(padding, $direction, $value);
+}

@@ -1,0 +1,201 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/font" as *;
+@use "../abstracts/flexbox" as *;
+@use "../utilities/border" as *;
+@use "../abstracts/size" as *;
+@use "../abstracts/transition" as *;
+@use "../abstracts/position" as *;
+@use "../base/typography" as *;
+
+.product-details {
+  &--section {
+    position: relative;
+    padding: 64px 0;
+    display: block;
+    width: 100%;
+    background-color: theme-color("primary");
+    color: theme-color("white");
+
+    h2 {
+      @include font(60px, 600, 150%, normal);
+      position: relative;
+      display: block;
+      margin: 0;
+
+      @media (max-width: 479.98px) {
+        font-size: 35px;
+      }
+    }
+
+    p {
+      @include font(17px, 400, 150%, normal);
+      position: relative;
+      display: block;
+      margin: 0;
+      color: rgba(255, 244, 220, 0.75);
+    }
+
+    .link {
+      color: theme-color("white");
+      @include inline-flexbox(row, flex-start, center, wrap);
+      gap: 4px;
+      @extend %link;
+
+      svg {
+        @include size(14px);
+      }
+    }
+
+    .product__details-swiper {
+      position: relative;
+      width: 138px;
+
+      .swiper-wrapper {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .swiper-slide {
+        border: 2px solid transparent;
+
+        &.swiper-slide-thumb-active {
+          border-color: theme-color("white");
+        }
+      }
+
+      .product__details-image {
+        // max-height: 100px;
+        height: 100%;
+
+        img {
+          @include size(100%, 130px);
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+
+      &--thumbs {
+        flex: 1;
+        .product__details-image {
+          height: 85%;
+        }
+
+        .swiper-slide {
+          height: auto;
+
+          img {
+            @include size(100%, 100%);
+            object-fit: cover;
+            object-position: top;
+          }
+        }
+      }
+    }
+
+    .sale__price {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-left: 10px;
+    }
+
+    .sale__text {
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .button-group {
+      @include flexbox(row, flex-start, center, wrap);
+      gap: 15px;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .btn {
+      flex: 1;
+
+      &__primary {
+        background-color: transparent;
+        border: 2px solid theme-color("white");
+        @include border-radius(4px);
+      }
+
+      &__secondary {
+        background-color: theme-color("white");
+        color: theme-color("black");
+        border: 2px solid theme-color("white");
+        @include border-radius(4px);
+      }
+    }
+
+    .product__quantity {
+      .quantity__selector {
+        @include flexbox(row, flex-start, stretch, wrap);
+        gap: 0;
+        width: 100%;
+        // margin-top: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 1);
+      }
+
+      label {
+        @include font(14px, 500, 150%, normal);
+        margin-bottom: 10px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      input {
+        // @include size(60px, 40px);
+        flex: 1;
+        @include font(14px, 500, 150%, normal);
+        text-align: center;
+        border: none;
+        // border-radius: 8px;
+        outline: none;
+        background-color: transparent;
+        border-right: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        color: theme-color("white");
+      }
+
+      button {
+        @include size(45px, 40px);
+        background-color: transparent;
+        color: theme-color("white");
+        border: none;
+        // border-radius: 8px;
+        cursor: pointer;
+        @include font(24px, 500, 150%, normal);
+        line-height: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          @include size(14px);
+        }
+
+        // &:hover {
+        //   background-color: rgba(255, 255, 255, 0.8);
+        // }
+      }
+    }
+  }
+
+  &__content {
+    @include flexbox(column, flex-start, flex-start, wrap);
+    gap: 10px;
+  }
+
+  &__flex {
+    @include flexbox(row, space-between, center, wrap);
+    gap: 30px;
+    width: 100%;
+    // margin-top: 3.5rem;
+  }
+
+  &__images {
+    @include flexbox(row, flex-start, flex-start, wrap);
+    gap: 20px;
+  }
+}

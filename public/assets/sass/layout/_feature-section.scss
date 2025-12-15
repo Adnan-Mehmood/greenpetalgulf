@@ -1,0 +1,175 @@
+/* Features Section */
+.features-section {
+  position: relative;
+  padding: 120px 0 90px;
+  background-color: #f8f8f8;
+}
+
+.feature-block {
+  position: relative;
+}
+
+.feature-block .inner-box {
+  position: relative;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+  padding: 35px 30px 20px;
+  padding-left: 130px;
+  background-color: #fff;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.feature-block:last-child .inner-box {
+  border-bottom: 0;
+}
+
+.feature-block .icon {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.feature-block h4 {
+  position: relative;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 13px;
+}
+
+.feature-video {
+  position: relative;
+  padding: 50px;
+  background-size: cover;
+  overflow: hidden;
+  min-height: 503px;
+}
+
+.feature-video h4 {
+  position: relative;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.feature-video .text {
+  position: relative;
+  max-width: 310px;
+}
+
+.feature-video .shape {
+  position: absolute;
+  top: -104px;
+  left: -94px;
+  width: 430px;
+  height: 430px;
+  transform: rotate(45deg);
+  border-radius: 50px;
+}
+
+.feature-video .pattern {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.feature-video .video-box {
+  position: relative;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-size: cover;
+  background-position: right center;
+}
+
+.feature-video .video-btn {
+  position: relative;
+  text-align: center;
+}
+
+.feature-video .video-btn span {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 50%;
+}
+
+.feature-video .video-btn a {
+  height: 90px;
+  width: 90px;
+  line-height: 90px;
+  border-radius: 50%;
+  color: #212121;
+  text-align: center;
+  font-size: 24px;
+  display: inline-block;
+  position: relative;
+  background-color: #ffffff;
+  padding-left: 5px;
+  transition: 0.5s;
+}
+
+.feature-video .video-btn .ripple:before {
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  right: -15px;
+  bottom: -15px;
+  content: "";
+  border-radius: 50%;
+  transition: 0.7s;
+  border: 1px solid #fff;
+}
+
+.feature-video .video-btn .ripple:hover:before {
+  transform: scale(1.05);
+}
+
+.feature-video .video-btn .ripple:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.14);
+  -ms-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.14);
+  -o-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.14);
+  -webkit-animation: ripple 3s infinite;
+  animation: ripple 3s infinite;
+}
+
+.feature-video .video-btn .ripple:after {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+@-webkit-keyframes ripple {
+  70% {
+    -webkit-box-shadow: 0 0 0 70px rgba(244, 68, 56, 0);
+    box-shadow: 0 0 0 70px rgba(244, 68, 56, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
+    box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
+  }
+}
+
+@keyframes ripple {
+  70% {
+    -webkit-box-shadow: 0 0 0 70px rgba(244, 68, 56, 0);
+    box-shadow: 0 0 0 70px rgba(244, 68, 56, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
+    box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
+  }
+}

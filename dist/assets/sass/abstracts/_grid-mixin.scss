@@ -1,0 +1,125 @@
+// ------------------------------------
+// Grid System Utilities + Mixins
+// ------------------------------------
+
+// Grid Container
+.grid {
+  display: grid !important;
+  gap: 1rem;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+// Grid Columns: Basic Presets
+.grid-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.grid-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+// Grid Gap Utilities
+.grid-gap-0 {
+  gap: 0 !important;
+}
+.grid-gap-xs {
+  gap: 0.5rem !important;
+}
+.grid-gap-sm {
+  gap: 1rem !important;
+}
+.grid-gap-md {
+  gap: 2rem !important;
+}
+.grid-gap-lg {
+  gap: 3rem !important;
+}
+
+// Responsive Columns (mobile-first)
+@media (min-width: 768px) {
+  .grid-md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-md-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-md-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .grid-lg-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-lg-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-lg-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+// Grid Alignment Utilities
+.grid-align-start {
+  align-items: start !important;
+}
+.grid-align-center {
+  align-items: center !important;
+}
+.grid-align-end {
+  align-items: end !important;
+}
+
+.grid-justify-start {
+  justify-items: start !important;
+}
+.grid-justify-center {
+  justify-items: center !important;
+}
+.grid-justify-end {
+  justify-items: end !important;
+}
+
+// ------------------------------------
+// GRID MIXINS
+// ------------------------------------
+
+// Grid Layout
+@mixin grid($cols: 12, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  gap: $gap;
+}
+
+// Grid Auto Flow
+@mixin grid-flow($direction: row) {
+  grid-auto-flow: $direction;
+}
+
+// Grid Responsive Mixin
+@mixin responsive-grid($mobile: 1, $tablet: 2, $desktop: 4) {
+  grid-template-columns: repeat($mobile, 1fr);
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat($tablet, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat($desktop, 1fr);
+  }
+}

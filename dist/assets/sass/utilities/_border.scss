@@ -1,0 +1,37 @@
+// ------------------------------------
+// Border Mixins (_border.scss)
+// ------------------------------------
+
+/// Apply border with optional values
+/// @param {String} $width - Border width (default: 1px)
+/// @param {String} $style - Border style (default: solid)
+/// @param {Color} $color - Border color (default: currentColor)
+@mixin border($width: 1px, $style: solid, $color: currentColor) {
+  border: $width $style $color;
+}
+
+/// Apply border on specific side
+/// @param {String} $side - top, right, bottom, left
+/// @param {String} $width
+/// @param {String} $style
+/// @param {Color} $color
+@mixin border-side($side, $width: 1px, $style: solid, $color: currentColor) {
+  border-#{$side}: $width $style $color;
+}
+
+/// Border radius shortcut
+/// @param {Length} $radius - Radius value (e.g. 4px, 50%)
+@mixin border-radius($radius: 4px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/// Circle shape
+@mixin circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}

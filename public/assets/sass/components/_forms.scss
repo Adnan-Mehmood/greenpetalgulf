@@ -1,0 +1,67 @@
+// // ------------------------------------
+// // Form Styles
+// // ------------------------------------
+
+// .form {
+//   display: flex;
+//   flex-direction: column;
+//   gap: spacer(2);
+
+//   label {
+//     font-weight: $font-weight-semibold;
+//     margin-bottom: spacer(0.5);
+//     color: $color-text;
+//   }
+
+//   input,
+//   textarea,
+//   select {
+//     font-family: inherit;
+//     font-size: 1rem;
+//     padding: spacer(1.5) spacer(2);
+//     border: 1px solid $color-border;
+//     border-radius: $border-radius;
+//     background-color: $color-white;
+//     color: $color-text;
+//     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+//     &:focus {
+//       outline: none;
+//       border-color: theme-color("primary");
+//       box-shadow: 0 0 0 3px rgba(theme-color("primary-rgb"), 0.3);
+//     }
+
+//     &::placeholder {
+//       color: $color-muted;
+//     }
+//   }
+
+//   textarea {
+//     resize: vertical;
+//     min-height: 6rem;
+//   }
+
+//   select {
+//     background-color: $color-white;
+//   }
+
+//   .form-error {
+//     color: theme-color("danger");
+//     font-size: 0.875rem;
+//     margin-top: spacer(0.5);
+//   }
+
+//   .form-help-text {
+//     font-size: 0.875rem;
+//     color: $color-muted;
+//     margin-top: spacer(0.25);
+//   }
+
+//   // Disabled inputs
+//   input[disabled],
+//   textarea[disabled],
+//   select[disabled] {
+//     background-color: $color-muted-light;
+//     cursor: not-allowed;
+//   }
+// }

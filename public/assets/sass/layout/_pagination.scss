@@ -1,0 +1,44 @@
+/*page pagination two*/
+.page_pagination_two {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page_pagination_two li {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.page_pagination_two li a {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  border-radius: 0px;
+  border: 1px solid #e3e3e3;
+  text-align: center;
+  color: #212121;
+  font-size: 20px;
+  font-family: "Mukta", sans-serif;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.page_pagination_two li.prev a {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.page_pagination_two li.next a {
+  font-size: 16px;
+  font-weight: 400;
+  transform: rotate(180deg);
+}
+
+.page_pagination_two li.next a:hover {
+  color: #4b4b4b;
+}

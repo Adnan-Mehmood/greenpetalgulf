@@ -1,0 +1,139 @@
+@use "../abstracts/variables" as *;
+
+/* Services section */
+.services-section {
+  position: relative;
+  padding: 120px 0 60px;
+}
+
+.service-block .inner-box {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.service-block .image {
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.service-block .image:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #212121;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.service-block .inner-box:hover .image:before {
+  opacity: 0.9;
+}
+
+.service-block .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-block .lower-content {
+  position: relative;
+  padding: 30px;
+  padding-top: 0;
+  margin: -60px 20px 0;
+  background-color: #f8f8f8;
+  transition: 0.5s;
+  border-bottom: 5px solid $color-primary;
+}
+
+.service-block .inner-box:hover .lower-content {
+  background-color: #fff;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+  margin-top: -82px;
+  padding-bottom: 52px;
+}
+
+.service-block .icon {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: #1d4c89;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: -10px;
+  transform: translateY(-50px);
+}
+
+.service-block .icon img {
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.service-block .icon:before {
+  position: absolute;
+  content: "";
+  left: -10px;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  transition: 0.5s;
+  transform: scale(0.8);
+  opacity: 0;
+  border-radius: 50%;
+  border: 1px solid #1d4c89;
+}
+
+.service-block .inner-box:hover .icon:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.service-block .icon .shape {
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  bottom: -30px;
+  transition: 0.5s;
+}
+
+.service-block .inner-box:hover .icon .shape {
+  opacity: 0;
+}
+
+.service-block h4 {
+  position: relative;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.service-block .text {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.service-block .link-btn {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #212121;
+  opacity: 0;
+  transition: 0.5s;
+  background-color: $color-primary;
+}
+
+.service-block .inner-box:hover .link-btn {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}

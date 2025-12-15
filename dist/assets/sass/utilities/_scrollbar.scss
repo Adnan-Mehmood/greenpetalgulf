@@ -1,0 +1,39 @@
+// ------------------------------------
+// Scrollbar Mixin (_scrollbar.scss)
+// ------------------------------------
+
+/// Customize scrollbar styles (WebKit & Firefox)
+/// @param {Length} $width - Scrollbar width (default: 8px)
+/// @param {Color} $track-color - Scrollbar track background (default: #f1f1f1)
+/// @param {Color} $thumb-color - Scrollbar thumb background (default: #888)
+/// @param {Color} $thumb-hover-color - Scrollbar thumb hover background (default: #555)
+@mixin scrollbar(
+  $width: 8px,
+  $track-color: #f1f1f1,
+  $thumb-color: #888,
+  $thumb-hover-color: #555
+) {
+  // WebKit browsers (Chrome, Safari)
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $track-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+    border-radius: $width;
+    border: 2px solid $track-color;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $thumb-hover-color;
+  }
+
+  // Firefox scrollbar (works from Firefox 64+)
+  scrollbar-width: thin;
+  scrollbar-color: $thumb-color $track-color;
+}

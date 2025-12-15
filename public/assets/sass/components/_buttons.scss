@@ -1,0 +1,83 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../utilities/border" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/font" as *;
+@use "../abstracts/flexbox" as *;
+@use "../abstracts/transition" as *;
+// ------------------------------------
+// Buttons
+// ------------------------------------
+
+.btn {
+  padding: 0.8rem 2rem;
+  @include border-radius(10px);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none !important;
+  @include font(17px, 700, 100%, normal);
+  margin-bottom: 0;
+  @include inline-flexbox(row, center, center);
+  min-height: 40px;
+  @include transition(all, 0.3s);
+  min-width: 160px;
+
+  &:hover,
+  &:focus {
+    background-color: theme-color("primary-dark");
+    color: #fff;
+    outline: none;
+    padding: 0.8rem 2.5rem;
+  }
+
+  &:disabled,
+  &[disabled] {
+    // background-color: $color-muted;
+    cursor: not-allowed;
+    opacity: 0.65;
+  }
+
+  &__primary {
+    background-color: theme-color("primary");
+    color: theme-color("white");
+  }
+}
+
+// Variants
+
+.button-secondary {
+  @include button-style(
+    theme-color("secondary"),
+    $text-color: theme-color("dark")
+  );
+  border: 1px solid theme-color("secondary");
+
+  &:hover,
+  &:focus {
+    background-color: theme-color("secondary-dark");
+    color: #fff;
+  }
+}
+
+.button-outline {
+  background-color: transparent;
+  color: theme-color("primary");
+  border: 2px solid theme-color("primary");
+
+  &:hover,
+  &:focus {
+    background-color: theme-color("primary");
+    color: #fff;
+  }
+}
+
+// Sizes
+
+.button-sm {
+  font-size: 0.875rem;
+  padding: spacer(1) spacer(2);
+}
+
+.button-lg {
+  font-size: 1.25rem;
+  padding: spacer(3) spacer(4);
+}

@@ -1,0 +1,344 @@
+@use "../base/typography" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+
+// ------------------------------------
+// Base Styles
+// ------------------------------------
+
+// Set box-sizing globally
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Set base font size and family (can override with variables)
+html {
+  font-size: 16px;
+  font-family: $font-family-sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Remove default margins
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+.page-wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 300px;
+  z-index: 9;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+// Set core body defaults
+body {
+  // font-family: $font-family-base;
+  font-family: "Heebo", sans-serif;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-text;
+  background-color: $color-body-bg;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none !important;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  font-weight: normal;
+  line-height: 1.25em;
+  margin: 0px;
+  background: none;
+  color: #212121;
+  font-family: "Mukta", sans-serif;
+}
+
+.theme-color-two h1,
+.theme-color-two h2,
+.theme-color-two h3,
+.theme-color-two h4,
+.theme-color-two h5,
+.theme-color-two h6 {
+  color: #011940;
+}
+
+textarea {
+  overflow: hidden;
+}
+
+button {
+  outline: none !important;
+  cursor: pointer;
+}
+
+.text {
+  font-size: 17px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #4a4a4a;
+  margin: 0px 0px 15px;
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+}
+
+::-moz-input-placeholder {
+  color: inherit;
+}
+
+::-ms-input-placeholder {
+  color: inherit;
+}
+
+.btn-light:not(:disabled):not(.disabled).active:focus,
+.btn-light:not(:disabled):not(.disabled):active:focus,
+.show > .btn-light.dropdown-toggle:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-light:not(:disabled):not(.disabled).active,
+.btn-light:not(:disabled):not(.disabled):active,
+.show > .btn-light.dropdown-toggle {
+  background-color: inherit;
+  border-color: inherit;
+  color: inherit;
+  border-radius: 0;
+}
+
+// Utility classes (optional)
+// .sr-only for screen reader only text
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.bootstrap-select .dropdown-menu li a span.text {
+  margin-bottom: 0;
+}
+
+.bootstrap-select .dropdown-menu li.active a span.text {
+  color: #fff;
+}
+
+.bootstrap-select .dropdown-toggle .filter-option:after {
+  font-family: "Flaticon";
+  content: "\f133";
+  position: absolute;
+  right: 0;
+  top: 5px;
+  display: block;
+  line-height: 30px;
+  font-size: 11px;
+  text-align: center;
+  z-index: 5;
+  font-weight: 400;
+  color: #a3a3a3;
+}
+
+.dropup .dropdown-toggle::after {
+  display: none;
+}
+
+.page-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 300px;
+  z-index: 9;
+  overflow: hidden;
+}
+
+.auto-container {
+  position: static;
+  max-width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+figure {
+  margin-bottom: 0;
+}
+
+.theme-btn {
+  display: inline-block;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.centered {
+  text-align: center !important;
+}
+
+.gray-bg {
+  background-color: #f4f4f4 !important;
+}
+
+.light-bg {
+  background-color: #fff !important;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.fa {
+  line-height: inherit;
+}
+
+.preloader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../images/icons/preloader.svg);
+}
+
+.theme-color-two .preloader {
+  background-image: url(../images/icons/preloader-2.svg);
+}
+
+.theme-color-three .preloader {
+  background-image: url(../images/icons/preloader-3.svg);
+}
+
+.theme-color-four .preloader {
+  background-image: url(../images/icons/preloader-4.svg);
+}
+
+.theme-color-five .preloader {
+  background-image: url(../images/icons/preloader-5.svg);
+}
+
+.preloader-close {
+  position: fixed;
+  z-index: 999999;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  right: 0;
+  bottom: 0;
+  font-weight: 600;
+}
+
+.loader-wrap {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+}
+
+.loader-wrap .layer-one {
+  position: absolute;
+  left: 0%;
+  top: 0;
+  width: 33.3333%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.loader-wrap .layer-two {
+  position: absolute;
+  left: 33.3333%;
+  top: 0;
+  width: 33.3333%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.loader-wrap .layer-three {
+  position: absolute;
+  left: 66.6666%;
+  top: 0;
+  width: 33.3333%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.loader-wrap .layer .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a273d;
+}
+
+.owl-nav,
+.owl-dots {
+  display: none;
+}
+
+/* Btn style */
+
+.theme-btn {
+  display: inline-block;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}

@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+
+/* Theme Btn */
+.theme-btn {
+  position: relative;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 24px;
+  color: #212121;
+  padding: 18px 35px;
+  font-weight: 500;
+  overflow: hidden;
+  text-transform: capitalize;
+  vertical-align: middle;
+  text-align: center;
+  min-width: 160px;
+  background-color: $color-primary;
+}
+
+.theme-btn:hover {
+  color: #fff;
+}
+
+.theme-btn:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  content: "";
+  background-color: #212121;
+  transition: 0.5s;
+}
+
+.theme-btn:hover:before {
+  width: 100%;
+}
+
+.theme-btn span {
+  position: relative;
+}
+
+.theme-btn span i {
+  margin-right: 7px;
+}
+
+.theme-btn.style-two {
+  padding: 16px 46px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.theme-btn.style-two:hover {
+  color: #212121;
+}

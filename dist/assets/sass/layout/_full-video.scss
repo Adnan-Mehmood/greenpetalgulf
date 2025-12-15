@@ -1,0 +1,15 @@
+@use "../abstracts/size" as *;
+@use "../abstracts/position" as *;
+
+.full-video {
+  min-height: 70vh;
+  position: relative;
+  width: 100%;
+
+  video {
+    @include size(100%);
+    object-fit: cover;
+    object-position: center;
+    @include set-position(absolute, 0, 0, 0, 0);
+  }
+}

@@ -1,0 +1,440 @@
+/* Service Details */
+.service-details-page {
+  position: relative;
+  padding: 120px 0 90px;
+}
+
+.service-sidebar .category-widget ul {
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+}
+
+.category-widget li {
+  margin-bottom: 5px;
+}
+
+.category-widget li a {
+  display: block;
+  background: #f8f8f8;
+  padding: 14.5px 30px;
+  font-size: 17px;
+  color: #4b4b4b;
+  font-weight: 500;
+}
+
+.service-sidebar .category-widget li a {
+  position: relative;
+  padding: 18.5px 30px;
+  display: block;
+  width: 100%;
+  color: #000;
+}
+
+.service-sidebar .category-widget li a:after {
+  position: absolute;
+  top: 6px;
+  right: 60px;
+  content: "";
+  width: 60px;
+  height: 53px;
+  background: url(../images/icons/icon-34.png);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.service-sidebar .category-widget li.active a:after {
+  opacity: 1;
+}
+
+.service-sidebar .category-widget li a:before {
+  position: absolute;
+  top: 26px;
+  right: 20px;
+  content: "";
+  width: 11px;
+  height: 11px;
+  background: url(../images/icon-35.png);
+}
+
+.service-sidebar .category-widget li.active a:before {
+  background: url(../images/icon-36.png);
+  width: 31px;
+}
+
+.service-sidebar .brochure-widget .widget-content {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+}
+
+.service-sidebar .brochure-widget .single-brochure a {
+  background: #f8f8f8;
+}
+
+/* Service Details */
+.service-details {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.service-details .image {
+  position: relative;
+  margin-bottom: 30px;
+  aspect-ratio: 16/10;
+}
+
+.service-details .image img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.service-details .text-block {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.service-details .text-block h2 {
+  position: relative;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.service-details .text-block h2:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 76px;
+  height: 11px;
+  background-image: url(../images/shape/shape-5.png);
+  background-repeat: no-repeat;
+}
+
+.service-details .text-block .feature-box {
+  position: relative;
+}
+
+.service-details .text-block h3 {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.service-details-page .feature-box h3 {
+  position: relative;
+  font-size: 30px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.service-details-page .feature-box {
+  position: relative;
+  margin-bottom: 130px;
+}
+
+.service-details-page .feature-box .inner-box {
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  padding-left: 110px;
+}
+
+.service-details-page .feature-box .wrapper-box {
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+}
+
+.service-details-page .feature-box .icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.service-details-page .feature-box h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service-details-page .feature-box .text {
+  margin-bottom: 0;
+}
+
+.service-details-page .text p {
+  margin-bottom: 15px;
+}
+
+.service-details-page .text ul.list-styled,
+.service-details-page .text ul.list-styled li {
+  list-style: disc;
+}
+
+.service-details-page h3 {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.service-details-page .contact-form {
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  padding-bottom: 10px;
+}
+
+.service-details-page .contact-form .form-group-two {
+  margin-bottom: 30px;
+  margin-top: -10px;
+}
+
+.service-details-page .request-callback-area .text {
+  margin-bottom: 40px;
+}
+
+.service-details-page .contact-form {
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  padding-bottom: 10px;
+}
+
+.service-details-page .contact-form .form-group-two {
+  margin-bottom: 30px;
+  margin-top: -10px;
+}
+
+.service-details-page .request-callback-area .text {
+  margin-bottom: 40px;
+}
+
+.service-details-page .tab-btn-style-one {
+  position: relative;
+  margin-bottom: 50px;
+  justify-content: space-around;
+  padding: 13px 0;
+}
+
+.service-details-page .tab-btn-style-one .nav-item {
+  margin: 0;
+  width: 33.333%;
+  text-align: center;
+  border-right: 1px solid #e3e3e3;
+}
+
+.service-details-page .tab-btn-style-one .nav-item .nav-link {
+  border: 0;
+  padding: 7.5px 0;
+  display: inline-block;
+  padding-left: 30px;
+  position: relative;
+}
+
+.service-details-page .tab-btn-style-one .nav-item:last-child {
+  border-right: 0;
+}
+
+.service-details-page .tab-area {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.service-details-page .tab-btn-style-one .nav-item .nav-link h4 {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.service-details-page .tab-btn-style-one .nav-item .nav-link:after {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f058";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  font-size: 20px;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.service-details-page .tab-btn-style-one .nav-item .nav-link.active:after {
+  font-weight: 900;
+}
+
+.service-details-page .tab-content .content .list {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.service-details-page .tab-content .content .list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 9px;
+}
+
+.service-details-page .tab-content .content .list li:before {
+  font-family: "Flaticon";
+  content: "\f137";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  display: block;
+  line-height: 30px;
+  font-size: 13px;
+  text-align: center;
+  z-index: 5;
+  font-weight: 400;
+}
+
+.service-details-page .owl-theme .owl-nav {
+  position: absolute;
+  bottom: -92px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  display: block;
+  height: 52px;
+  margin: 0 15px;
+}
+
+.service-details-page .owl-theme .owl-nav .owl-prev {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #212121;
+  height: 60px;
+  width: 50%;
+  border: none;
+  text-align: center;
+  color: rgba(0, 0, 0, 0);
+  line-height: 70px;
+  font-size: 0px;
+  opacity: 1;
+  margin-top: -25px;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  border-right: 1px solid #fff;
+}
+
+.service-details-page .owl-theme .owl-nav .owl-prev:after {
+  font-family: "Flaticon";
+  content: "\f13a";
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 60px;
+  line-height: 60px;
+  left: 15px;
+  color: #ffffff;
+  font-size: 16px;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.service-details-page .owl-theme .owl-nav .owl-prev:before {
+  content: "Prev";
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 60px;
+  line-height: 60px;
+  left: 48px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 500;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.service-details-page .owl-theme .owl-nav .owl-prev:hover:after {
+  margin-left: 0;
+}
+
+.service-details-page .owl-theme .owl-nav .owl-next {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #212121;
+  height: 60px;
+  width: 50%;
+  border: none;
+  text-align: right;
+  line-height: 50px;
+  color: rgba(0, 0, 0, 0);
+  font-size: 0px;
+  opacity: 1;
+  margin-top: -25px;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.service-details-page .owl-theme .owl-nav .owl-next:after {
+  font-family: "Flaticon";
+  content: "\f13a";
+  position: absolute;
+  top: -1px;
+  width: 50px;
+  height: 60px;
+  line-height: 60px;
+  right: 30px;
+  color: #ffffff;
+  font-size: 16px;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  transform: rotate(180deg);
+  text-align: left;
+}
+
+.service-details-page .owl-theme .owl-nav .owl-next:before {
+  content: "Next";
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 60px;
+  line-height: 60px;
+  right: 60px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 500;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.service-details-page .owl-theme .owl-nav .owl-next:hover:after {
+  margin-right: 0;
+}
+
+.service-details-page .owl-theme .owl-nav .owl-prev:hover:after,
+.service-details-page .owl-theme .owl-nav .owl-next:hover:after {
+  opacity: 1;
+}
+
+.service-details-page .owl-theme .owl-nav .owl-prev:hover,
+.service-details-page .owl-theme .owl-nav .owl-next:hover {
+  opacity: 1;
+}
+
+.service-details-page .owl-theme .owl-nav .owl-next:hover:after,
+.service-details-page .owl-theme .owl-nav .owl-next:hover:before,
+.service-details-page .owl-theme .owl-nav .owl-prev:hover:after,
+.service-details-page .owl-theme .owl-nav .owl-prev:hover:before {
+  color: #212121;
+}
+
+.service-details-page .owl-carousel .owl-stage-outer:before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #e3e3e3;
+}

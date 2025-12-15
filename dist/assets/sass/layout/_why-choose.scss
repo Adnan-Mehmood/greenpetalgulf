@@ -1,0 +1,102 @@
+/* whychoose us */
+.whychoose-us-section {
+  position: relative;
+  padding: 120px 0 60px;
+  background-size: cover;
+}
+
+.whychoose-us-section .top-content .text {
+  position: relative;
+  color: #aab4c5;
+  padding: 28px 0;
+  padding-left: 30px;
+  margin-bottom: 30px;
+  margin-top: -30px;
+}
+
+.why-choose-us-block .icon {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 90px;
+  height: 90px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 90px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.why-choose-us-block .icon:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.7s;
+  transform: scale(0);
+  border-radius: 50%;
+}
+
+.why-choose-us-block .inner-box:hover .icon:before {
+  transform: scale(1);
+}
+
+.why-choose-us-block .icon i {
+  position: relative;
+}
+
+.why-choose-us-block .inner-box:hover .icon {
+  color: #fff;
+}
+
+.why-choose-us-block .inner-box {
+  position: relative;
+  padding-left: 140px;
+  margin-bottom: 30px;
+  padding-bottom: 40px;
+  margin-right: 10px;
+}
+
+.why-choose-us-block h4 {
+  color: #fff;
+  position: relative;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.why-choose-us-block .text {
+  position: relative;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.why-choose-us-block .link-btn {
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.why-choose-us-block .link-btn i {
+  font-size: 11px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.whychoose-us-section .wrapper-box {
+  position: relative;
+}
+
+.whychoose-us-section .wrapper-box:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  top: -1px;
+  right: -1px;
+  background-image: url(../images/shape/shape-12.png);
+  background-repeat: no-repeat;
+}

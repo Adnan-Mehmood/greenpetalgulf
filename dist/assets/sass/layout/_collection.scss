@@ -1,0 +1,132 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/font" as *;
+@use "../abstracts/position" as *;
+@use "../abstracts/flexbox" as *;
+@use "../abstracts/size" as *;
+@use "../abstracts/transition" as *;
+@use "../utilities/border" as *;
+
+.collection {
+  &-section {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 64px 0 94px 0;
+    background-color: theme-color("yellow-200");
+
+    h2 {
+      @include font(31px, 500, 120%, 0.27px);
+      margin-bottom: 0;
+      text-align: center;
+      max-width: 740px;
+      margin-inline: auto;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+    // max-width: 1620px;
+    margin-inline: auto;
+    // padding: 0 4rem;
+    @include flexbox(column, space-between, center, wrap);
+    gap: 2rem;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: start;
+    justify-content: flex-start;
+    gap: 1.8rem;
+    width: 100%;
+
+    @media (max-width: 479.98px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (min-width: 480px) and (max-width: 767.98px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: theme-color("black");
+    @include transition(all, 0.3s);
+
+    &:hover {
+      color: theme-color("primary");
+
+      .collection__item-image img {
+        object-position: bottom;
+        transform: translateY(-50px);
+      }
+
+      .collection__item-title {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+
+    &-link {
+      color: theme-color("black");
+      @include set-position(absolute, 0, 0, 0, 0);
+      @include size(100%);
+      display: block;
+      overflow: hidden;
+      position: relative;
+    }
+
+    &-image {
+      aspect-ratio: 1 / 1;
+      @include size(100%, 100%);
+
+      img {
+        @include set-position(absolute, 0, 0, 0, 0);
+        @include size(100%);
+        object-fit: cover;
+        object-position: center;
+        @include transition(all, .5s, ease-in);
+        scale: 1.01;
+      }
+    }
+
+    &-content {
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+      background-color: theme-color("yellow-200");
+      @include flexbox(row, center, center, wrap);
+
+      &-subtitle {
+        @include font(16px, 400, 120%, 0.27px);
+        color: theme-color("gray-600");
+      }
+
+      svg {
+        margin-left: 0.5rem;
+        @include size(16px);
+      }
+    }
+
+    &-title {
+      @include font(20px, 500, 120%, 0.27px);
+      margin-bottom: 0;
+      position: relative;
+
+      &:after {
+        content: "";
+        @include set-position(absolute, auto, 0, -6px, 0);
+        @include size(0, 1px);
+        background-color: theme-color("black");
+        @include transition(all, 0.3s);
+      }
+    }
+  }
+}

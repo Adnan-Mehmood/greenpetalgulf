@@ -1,0 +1,31 @@
+.certification {
+  &-section {
+    position: relative;
+    width: 100%;
+    display: block;
+    padding: 100px 0;
+    background-color: #1d4c89;
+
+    img {
+      transition: all .3s ease;
+    }
+
+    a {
+      &:hover {
+        img {
+          scale: 1.05;
+        }
+      }
+    }
+
+    h2 {
+      color: #fff;
+    }
+  }
+
+  &-block {
+    @media (max-width: 767.98px) {
+      margin-bottom: 20px;
+    }
+  }
+}

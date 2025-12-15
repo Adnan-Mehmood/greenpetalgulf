@@ -1,0 +1,105 @@
+// ------------------------------------
+// Font Face Mixin (_font-face.scss)
+// ------------------------------------
+
+/// Include a custom font-face with multiple formats and options
+/// @param {String} $family - Font family name (required)
+/// @param {String} $file-path - Path to font files without extension (required)
+/// @param {String} $weight - Font weight (default: normal)
+/// @param {String} $style - Font style (default: normal)
+/// @param {String} $display - Font display strategy (default: swap)
+/// @param {Map} $formats - Map of formats and extensions (default: woff2, woff, ttf, eot, svg)
+/// @param {String} $unicode-range - Optional unicode-range descriptor (default: null)
+/// @param {String} $stretch - Optional font-stretch (default: normal)
+/// @param {String} $variant - Optional font-variant (default: normal)
+@mixin font-face(
+  $family,
+  $file-path,
+  $weight: normal,
+  $style: normal,
+  $display: swap,
+  $formats: (
+    woff2: "woff2",
+    woff: "woff",
+    ttf: "truetype",
+    eot: "embedded-opentype",
+    svg: "svg"
+  ),
+  $unicode-range: null,
+  $stretch: normal,
+  $variant: normal
+) {
+  @font-face {
+    font-family: #{$family};
+    font-weight: #{$weight};
+    font-style: #{$style};
+    font-display: #{$display};
+    font-stretch: #{$stretch};
+    font-variant: #{$variant};
+
+    @if $unicode-range != null {
+      unicode-range: #{$unicode-range};
+    }
+
+    // EOT format (for IE9 compatibility) requires separate src and src local
+    @if map-has-key($formats, eot) {
+      src: url("#{$file-path}.eot");
+      src: url("#{$file-path}.eot?#iefix") format("embedded-opentype");
+    }
+
+    // Loop through formats except eot (already added)
+    $format-srcs: ();
+
+    @each $ext, $format-name in $formats {
+      @if $ext != eot {
+        $format-srcs: append(
+          $format-srcs,
+          url("#{$file-path}.#{$ext}") format("#{$format-name}"),
+          comma
+        );
+      }
+    }
+
+    src: $format-srcs;
+  }
+}
+
+// Basic usage
+// @include font-face("Inter", "/fonts/Inter-Regular", 400, normal, swap);
+
+// // With unicode-range and font-stretch
+// @include font-face(
+//   "Roboto",
+//   "/fonts/Roboto-Regular",
+//   400,
+//   normal,
+//   swap,
+//   $unicode-range: "U+000-5FF",
+//   $stretch: condensed
+// );
+
+// @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// Headings Font
+@font-face {
+  font-family: "Zrnic";
+  src: url("https://cdn.shopify.com/s/files/1/0697/4937/5125/files/ZrnicLight.woff2?v=1740175087")
+      format("woff2"),
+    url("https://cdn.shopify.com/s/files/1/0697/4937/5125/files/ZrnicLight.woff?v=1740175087")
+      format("woff"),
+    url("https://cdn.shopify.com/s/files/1/0697/4937/5125/files/ZrnicLight.ttf?v=1740175087")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Slideshow Font
+@font-face {
+  font-family: "Quadaptor";
+  src: url("https://cdn.shopify.com/s/files/1/0697/4937/5125/files/QuadaptorRegular.ttf?v=1740175173")
+    format("truetype"); /* TTF backup */
+  font-weight: 400;
+  font-style: normal;
+}

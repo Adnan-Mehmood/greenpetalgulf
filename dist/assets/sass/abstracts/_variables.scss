@@ -1,0 +1,144 @@
+@use "sass:color";
+
+// ------------------------------------
+// Colors
+// ------------------------------------
+$color-primary: #7cc242;        // Light Green
+$color-primary-dark: #2e7d32;   // Dark Green
+$color-secondary: #2c6bb0;      // Medium Blue
+$color-secondary-dark: #1d4c89; // Dark Blue
+$color-gray-light: #d3d3d3;     // Light Gray
+$color-yellow-500: #f77f00;
+$color-yellow-300: #fcbf49;
+$color-yellow-200: #eae2b7;
+$color-success: #28a745;
+$color-danger: #dc3545;
+$color-warning: #ffc107;
+$color-info: #17a2b8;
+$color-light: #f8f9fa;
+$color-dark: #343a40;
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-body-bg: #ffffff;
+$color-text: #212529;
+$color-heading: #292929;
+$color-border: #f0f0f0;
+
+// Dark theme color
+$color-dark-bg: #121212;
+$color-dark-text: #e0e0e0;
+$color-dark-muted: #999999;
+$color-dark-card-bg: #1e1e1e;
+$color-dark-input-bg: #1c1c1c;
+$color-dark-border: #333333;
+
+// Theme maps (optional advanced usage)
+// $theme-colors: (
+//   "primary": $color-primary,
+//   "secondary": $color-secondary,
+//   "success": $color-success,
+//   "danger": $color-danger,
+//   "warning": $color-warning,
+//   "info": $color-info,
+//   "light": $color-light,
+//   "dark": $color-dark,
+
+//   // Dark theme maps
+//   "primary-light": lighten($color-primary, 20%),
+//   "primary-lighter": lighten($color-primary, 35%),
+//   "primary-dark": darken($color-primary, 10%),
+//   "primary-darker": darken($color-primary, 20%),
+//   "primary-light-rgb": rgba($color-primary, 1),
+// );
+
+// Theme maps (optional advanced usage)
+$theme-colors: (
+  "primary": $color-primary,
+  "secondary": $color-secondary,
+  "yellow-500": $color-yellow-500,
+  "yellow-300": $color-yellow-300,
+  "yellow-200": $color-yellow-200,
+  "success": $color-success,
+  "danger": $color-danger,
+  "warning": $color-warning,
+  "info": $color-info,
+  "light": $color-light,
+  "dark": $color-dark,
+  "white": $color-white,
+  "black": $color-black,
+
+  // Dark theme maps
+  "primary-light": color.adjust($color-primary, $lightness: 20%),
+  "primary-lighter": color.adjust($color-primary, $lightness: 35%),
+  "primary-dark": color.adjust($color-primary, $lightness: -10%),
+  "primary-darker": color.adjust($color-primary, $lightness: -20%),
+  "primary-light-rgb": rgba($color-primary, 1),
+);
+
+// ------------------------------------
+// Typography
+// ------------------------------------
+$font-family-base: "Poppins", sans-serif;
+$font-family-secondary: "Zrnic", sans-serif;
+$font-family-primary: "Quadaptor", sans-serif;
+$font-size-base: 1rem; // 16px
+$font-size-sm: 0.875rem; // 14px
+$font-size-lg: 1.25rem; // 20px
+$font-weight-normal: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 700;
+$line-height-base: 1.6;
+
+// ------------------------------------
+// Spacing
+// ------------------------------------
+$spacer: 1rem; // Base spacing unit
+
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+// ------------------------------------
+// Breakpoints (for media queries)
+// ------------------------------------
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+// ------------------------------------
+// Container widths (optional)
+// ------------------------------------
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+// ------------------------------------
+// Border radius
+// ------------------------------------
+$border-radius-sm: 0.2rem;
+$border-radius: 0.25rem;
+$border-radius-lg: 0.3rem;
+
+// ------------------------------------
+// Z-index scale
+// ------------------------------------
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;

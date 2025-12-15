@@ -1,0 +1,132 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/font" as *;
+@use "../abstracts/flexbox" as *;
+@use "../utilities/border" as *;
+@use "../abstracts/size" as *;
+@use "../abstracts/transition" as *;
+
+.testimonial {
+  &-section {
+    padding: 0 0 80px 0;
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: #ffefce;
+    color: theme-color("black");
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    justify-content: flex-start;
+    gap: 8px 20px;
+
+    @media (max-width: 479.98px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (min-width: 480px) and (max-width: 767.98px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    background-color: rgba(255, 244, 220, 1);
+    padding: 20px;
+    position: relative;
+    @include flexbox(column, flex-start, flex-start, wrap);
+    gap: 2rem;
+
+    h3 {
+      @include font(26px, 500, 150%, normal);
+      display: block;
+      position: relative;
+      margin-bottom: 5px;
+    }
+
+    p {
+      @include font(14px, 400, 150%, normal);
+      display: block;
+      position: relative;
+      margin: 0;
+    }
+
+    &-flex {
+      @include flexbox(row, flex-start, flex-start, wrap);
+      gap: 30px;
+
+      @media (max-width: 479.98px) {
+        flex-flow: column-reverse;
+      }
+    }
+
+    &-image {
+      @include size(80px);
+      @include border-radius(100px);
+      overflow: hidden;
+
+      @media (max-width: 479.98px) {
+        @include size(120px);
+      }
+
+      img {
+        @include size(100%);
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &-content {
+      flex: 1;
+    }
+
+    &-link {
+      @include flexbox(row, flex-start, center, wrap);
+      gap: 15px;
+      color: theme-color("black");
+      @include font(14px, 400, 120%, normal);
+      font-family: $font-family-secondary;
+
+      &:hover {
+        .testimonial__item-link--inside {
+          background-image: linear-gradient(
+            transparent calc(100% - 1px),
+            currentColor 5px
+          );
+          background-size: 100%;
+        }
+      }
+
+      img {
+        @include size(80px);
+        object-fit: cover;
+        object-position: center;
+      }
+
+      svg {
+        margin-left: 0.5rem;
+        @include size(16px);
+      }
+
+      &--inside {
+        @include flexbox(row, flex-start, center, wrap);
+        text-underline-offset: 0.3rem;
+        background-image: linear-gradient(
+          transparent calc(100% - 1px),
+          currentColor 5px
+        );
+        background-size: 0;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        padding-bottom: 0.3rem;
+        transition: all 0.4s ease, text-decoration 0s ease;
+      }
+    }
+  }
+}

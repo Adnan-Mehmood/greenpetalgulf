@@ -1,0 +1,260 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/font" as *;
+@use "../abstracts/flexbox" as *;
+@use "../utilities/border" as *;
+@use "../abstracts/size" as *;
+@use "../abstracts/transition" as *;
+@use "../abstracts/position" as *;
+@use "../base/typography" as *;
+
+/* Main Footer */
+
+.main-footer {
+  position: relative;
+  background: #212121;
+  padding: 100px 0 60px;
+}
+
+.widget {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.about-widget {
+  position: relative;
+}
+
+.about-widget .logo {
+  position: relative;
+  margin-bottom: 30px;
+
+  img {
+    max-width: 120px;
+  }
+}
+
+.about-widget .text {
+  position: relative;
+  color: #a3a3a3;
+  margin-bottom: 30px;
+}
+
+.about-widget .social-links {
+  position: relative;
+}
+
+.about-widget .social-links li {
+  position: relative;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.about-widget .social-links li a {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #a3a3a3;
+  background-color: #2e2e2e;
+  transition: 0.5s;
+  display: inline-block;
+}
+
+.about-widget .social-links li a:hover {
+  color: #212121;
+}
+
+/* links-widget */
+
+.links-widget {
+  position: relative;
+}
+
+.links-widget .list li {
+  position: relative;
+  margin-bottom: 13px;
+}
+
+.links-widget .list li a {
+  position: relative;
+  color: #a3a3a3;
+  transition: 0.5s;
+}
+
+.links-widget .list li a:before {
+  content: "\f013";
+  left: 0;
+  top: 0;
+  margin-right: 8px;
+  font-size: 16px;
+  font-family: "FontAwesome";
+  font-weight: 900;
+}
+
+.widget_title {
+  position: relative;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+.widget_title:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 76px;
+  height: 11px;
+  background-image: url(../images/shape/shape-3.png);
+  background-repeat: no-repeat;
+}
+
+/* Contact Widget */
+
+.contact-widget {
+  position: relative;
+}
+
+.contact-widget li {
+  position: relative;
+  color: #a3a3a3;
+  margin-bottom: 16px;
+  padding-left: 60px;
+  line-height: 27px;
+}
+
+.contact-widget i {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #a3a3a3;
+  background-color: #2e2e2e;
+  transition: 0.5s;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.contact-widget li:hover i {
+  color: #212121;
+}
+
+.contact-widget a {
+  color: #a3a3a3;
+}
+
+/* Instagram Widget */
+
+.instagram-widget .wrapper-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 10px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0px -4.5px;
+}
+
+.instagram-widget .wrapper-box .image {
+  position: relative;
+  overflow: hidden;
+  margin: 0px 4.5px 11px;
+}
+
+.instagram-widget .wrapper-box .image .overlay-link {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  background: rgb(33 33 33 / 0.9);
+}
+
+.instagram-widget .wrapper-box .image:hover .overlay-link {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.instagram-widget .wrapper-box .image .overlay-link a {
+  color: #fff;
+  font-size: 22px;
+}
+
+/* footer bottom */
+.footer-bottom {
+  position: relative;
+  background-color: #212121;
+}
+
+.footer-bottom .wrapper-box {
+  position: relative;
+  border-top: 1px solid #3a3a3a;
+  padding: 33px 0;
+}
+
+.footer-bottom .copyright-text {
+  color: #a3a3a3;
+  font-size: 17px;
+}
+
+.footer-bottom .menu {
+  font-size: 17px;
+}
+
+.footer-bottom .menu li {
+  position: relative;
+  display: inline-block;
+  padding-right: 28px;
+}
+
+.footer-bottom .menu li:before {
+  position: absolute;
+  content: "";
+  right: 9px;
+  bottom: 5px;
+  height: 2px;
+  width: 8px;
+  background-color: #a3a3a3;
+}
+
+.footer-bottom .menu li:last-child:before {
+  display: none;
+}
+
+.footer-bottom .menu li:last-child {
+  padding-right: 0;
+}
+
+.footer-bottom .menu li a {
+  color: #a3a3a3;
+  transition: 0.5s;
+}

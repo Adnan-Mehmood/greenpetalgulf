@@ -1,0 +1,49 @@
+// ------------------------------------
+// Typography Mixins (_font.scss)
+// ------------------------------------
+
+// Breakpoints map (you can customize)
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+);
+
+// Mixin: Font Setup
+// @param {Length} $size - Base font-size
+// @param {String} $weight - Font weight (e.g. 400, 700)
+// @param {Length} $lineHeight - Optional line-height
+// @param {Length} $letterSpacing - Optional letter-spacing
+@mixin font($size, $weight: null, $lineHeight: null, $letterSpacing: null) {
+  font-size: $size;
+
+  @if $weight != null {
+    font-weight: $weight;
+  }
+
+  @if $lineHeight != null {
+    line-height: $lineHeight;
+  }
+
+  @if $letterSpacing != null {
+    letter-spacing: $letterSpacing;
+  }
+}
+
+// Mixin: Responsive Font Size
+// @param {Map} $sizes - font-size values per breakpoint
+// Example: (base: 1rem, md: 1.25rem, lg: 1.5rem)
+@mixin responsive-font($sizes) {
+  @if map-has-key($sizes, base) {
+    font-size: map-get($sizes, base);
+  }
+
+  @each $break, $value in $sizes {
+    @if $break != base and map-has-key($breakpoints, $break) {
+      @media (min-width: map-get($breakpoints, $break)) {
+        font-size: $value;
+      }
+    }
+  }
+}

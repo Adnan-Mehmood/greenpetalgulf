@@ -1,0 +1,72 @@
+// ------------------------------------
+// Print Styles
+// ------------------------------------
+
+@media print {
+  // Basic resets for print
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 12pt;
+    line-height: 1.4;
+    margin: 0.5in;
+  }
+
+  a,
+  a:visited {
+    color: #000;
+    text-decoration: underline;
+    cursor: text;
+  }
+
+  // Hide elements not needed in print
+  .no-print,
+  header,
+  footer,
+  nav,
+  .modal,
+  .button,
+  .form-error,
+  .form-help-text {
+    display: none !important;
+  }
+
+  // Make images scale nicely
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  // Remove background colors and borders from tables for clarity
+  table {
+    border: 1px solid #000 !important;
+    border-collapse: collapse !important;
+  }
+
+  th,
+  td {
+    border: 1px solid #000 !important;
+    padding: 4px 8px !important;
+  }
+
+  // Page breaks
+  .page-break {
+    page-break-before: always !important;
+  }
+
+  // Avoid breaking inside elements like cards or sections
+  .card,
+  section {
+    page-break-inside: avoid !important;
+  }
+}

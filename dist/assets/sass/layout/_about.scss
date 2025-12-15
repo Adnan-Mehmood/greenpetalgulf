@@ -1,0 +1,186 @@
+@use "../abstracts/variables" as *;
+
+/* Sec Title */
+.sec-title {
+  position: relative;
+  margin-bottom: 55px;
+}
+
+.sec-title .sub-title {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: $color-primary;
+}
+
+.sec-title h2 {
+  position: relative;
+  font-size: 46px;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+
+.sec-title h2:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 76px;
+  height: 11px;
+  background-image: url(../images/shape/shape-5.png);
+  background-repeat: no-repeat;
+}
+
+.sec-title.text-center h2:before {
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../images/shape/shape-3.png);
+}
+
+.theme-color-two .sec-title h2:before {
+  background-image: url(../images/shape/shape-11.png);
+}
+
+.theme-color-two .sec-title.text-center h2:before {
+  background-image: url(../images/shape/shape-10.png);
+}
+
+.theme-color-three .sec-title h2:before {
+  background-image: url(../images/shape/shape-15.png);
+}
+
+.theme-color-three .sec-title.text-center h2:before {
+  background-image: url(../images/shape/shape-16.png);
+}
+
+.theme-color-four .sec-title h2:before {
+  background-image: url(../images/shape/shape-21.png);
+}
+
+.theme-color-four .sec-title.text-center h2:before {
+  background-image: url(../images/shape/shape-22.png);
+}
+
+.theme-color-five .sec-title h2:before {
+  background-image: url(../images/shape/shape-23.png);
+}
+
+.theme-color-five .sec-title.text-center h2:before {
+  background-image: url(../images/shape/shape-24.png);
+}
+
+.sec-title .text {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+.sec-title.light h2 {
+  color: #ffffff;
+}
+
+.sec-title.light .text {
+  color: #fff;
+}
+
+/* About Section */
+
+.about-us-section {
+  position: relative;
+  padding: 120px 0 90px;
+}
+
+.about-us-section .content {
+  position: relative;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 40px 0;
+  padding-left: 124px;
+  margin-top: 10px;
+  margin-right: 30px;
+}
+
+.about-us-section .content:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  width: 4px;
+  height: 105px;
+  transform: translateY(-50%);
+}
+
+.about-us-section .content .icon {
+  position: absolute;
+  top: 38px;
+  left: 35px;
+  padding-bottom: 30px;
+}
+
+.about-us-section .content .icon:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+}
+
+.about-us-section .content h4 {
+  position: relative;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.about-us-section .content .author-title {
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Mukta", sans-serif;
+}
+
+.about-us-section .content .author-title span {
+  font-size: 17px;
+  color: #4b4b4b;
+}
+
+.about-us-section .text-block {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.about-us-section .text-block h3 {
+  position: relative;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-us-section .text-block .text {
+  margin-bottom: 25px;
+}
+
+.about-us-section .text-block .list {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.about-us-section .text-block .list li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 10px;
+}
+
+.about-us-section .text-block .list li:before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/icons/icon-1.png);
+}

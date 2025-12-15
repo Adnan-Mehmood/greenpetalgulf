@@ -1,0 +1,37 @@
+/*** 
+
+====================================================================
+    Scroll To Top style
+====================================================================
+
+***/
+
+.scroll-to-top {
+  position: fixed;
+  right: 50px;
+  bottom: 90px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: center;
+  z-index: 100;
+  cursor: pointer;
+  margin-left: -26px;
+  display: none;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  color: #212121;
+}
+
+.scroll-to-top.style-two {
+  border-radius: 50%;
+}
+
+.scroll-to-top:hover {
+  color: #ffffff;
+}

@@ -1,0 +1,72 @@
+// ------------------------------------
+// Media Query Mixin
+// ------------------------------------
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xs {
+    @media (min-width: 0) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $breakpoint == xxl {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+}
+
+// ------------------------------------
+// Flex Center Mixin
+// ------------------------------------
+// @mixin flex-center {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// ------------------------------------
+// Button Style Mixin
+// ------------------------------------
+@mixin button-style($bg-color, $text-color: #fff) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  padding: 0.5rem 1rem;
+  // border-radius: $border-radius;
+  cursor: pointer;
+  // transition: $transition-base;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+// ------------------------------------
+// Text Truncate
+// ------------------------------------
+@mixin text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// ------------------------------------
+// Responsive Font Size
+// ------------------------------------
+// @mixin responsive-font($min, $max) {
+//   font-size: clamp(#{$min}rem, 2vw, #{$max}rem);
+// }
