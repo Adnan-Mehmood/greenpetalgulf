@@ -1,2 +1,1 @@
-Add framework used and also add pre-requisite for project configuration
-Description: Green Petals Gulf LLC is a trusted Saudi-based company specializing in mechanical, electrical, civil, maintenance and operation, environmental and green energy, and global trade services. At Green Petals Gulf, our mission is to drive innovation, uphold integrity, and pursue excellence across all these sectors. We are dedicated to delivering sustainable, high-impact solutions that benefit businesses, communities, and the environment alike.
+
