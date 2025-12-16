@@ -1,3 +1,4 @@
+import React from 'react';
 import { certifications } from '../content';
 
 const Certifications = () => (

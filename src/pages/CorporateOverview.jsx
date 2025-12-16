@@ -1,3 +1,4 @@
+import React from 'react';
 import AboutSidebar from '../components/AboutSidebar';
 
 const CorporateOverview = () => (

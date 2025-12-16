@@ -1,3 +1,4 @@
+import React from 'react';
 import { slides } from '../content';
 
 const Banner = () => (

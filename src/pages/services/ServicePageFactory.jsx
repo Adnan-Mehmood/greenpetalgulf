@@ -1,3 +1,4 @@
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { servicePages } from '../../content';
 import ServicePage from '../../components/ServicePage';

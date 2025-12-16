@@ -1,3 +1,4 @@
+import React from 'react';
 import { newsItems } from '../content';
 
 const NewsSection = () => (

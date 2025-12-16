@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import ServicesSidebar from './ServicesSidebar';
 
 const ServicePage = ({ title, heroImage, mainImage, sections }) => (
@@ -57,4 +59,17 @@ const ServicePage = ({ title, heroImage, mainImage, sections }) => (
 );
 
 export default ServicePage;
+
+ServicePage.propTypes = {
+  title: PropTypes.string.isRequired,
+  heroImage: PropTypes.string,
+  mainImage: PropTypes.string,
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      heading: PropTypes.string,
+      intro: PropTypes.string,
+      items: PropTypes.arrayOf(PropTypes.string),
+    })
+  ).isRequired,
+};
 

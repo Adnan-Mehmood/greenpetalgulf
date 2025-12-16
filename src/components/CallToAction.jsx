@@ -1,3 +1,5 @@
+import React from 'react';
+
 const CallToAction = () => (
   <section className="cta-section style-two">
     <div className="auto-container">

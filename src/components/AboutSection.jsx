@@ -1,3 +1,5 @@
+import React from 'react';
+
 const AboutSection = () => (
   <section className="about-us-section">
     <div className="auto-container">

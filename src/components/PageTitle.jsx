@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const PageTitle = ({ title, background = '/assets/images/bg-26.jpg' }) => (
@@ -21,5 +23,10 @@ const PageTitle = ({ title, background = '/assets/images/bg-26.jpg' }) => (
 );
 
 export default PageTitle;
+
+PageTitle.propTypes = {
+  title: PropTypes.string.isRequired,
+  background: PropTypes.string,
+};
 
 

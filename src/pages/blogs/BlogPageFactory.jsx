@@ -1,3 +1,4 @@
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { blogPages } from '../../content';
 import BlogPage from '../../components/BlogPage';

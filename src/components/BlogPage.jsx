@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import BlogSidebar from './BlogSidebar';
 
 const renderBlock = (block) => {
@@ -65,4 +67,11 @@ const BlogPage = ({ title, heroImage, mainImage, blocks }) => (
 );
 
 export default BlogPage;
+
+BlogPage.propTypes = {
+  title: PropTypes.string.isRequired,
+  heroImage: PropTypes.string,
+  mainImage: PropTypes.string,
+  blocks: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 

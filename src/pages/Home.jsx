@@ -1,3 +1,4 @@
+import React from 'react';
 import Banner from '../components/Banner';
 import AboutSection from '../components/AboutSection';
 import CallToAction from '../components/CallToAction';

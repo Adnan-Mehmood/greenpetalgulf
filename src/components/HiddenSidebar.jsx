@@ -1,3 +1,4 @@
+import React from 'react';
 import { contactInfo, footerAbout } from '../content';
 
 const HiddenSidebar = () => (

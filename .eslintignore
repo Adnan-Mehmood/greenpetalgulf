@@ -1,0 +1,7 @@
+node_modules
+build
+public
+dist
+vendor
+*.min.js
+.vite
