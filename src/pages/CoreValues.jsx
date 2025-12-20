@@ -1,7 +1,11 @@
 import React from 'react';
 import AboutSidebar from '../components/AboutSidebar';
+import PageTitle from '../components/PageTitle';
 
-const CoreValues = () => (
+const CoreValues = () => { 
+  return (
+    <>
+           <PageTitle title="Core Values" />
   <div className="service-details-page">
     <div className="auto-container">
       <div className="row">
@@ -54,7 +58,8 @@ const CoreValues = () => (
       </div>
     </div>
   </div>
+   </>
 );
-
+};
 export default CoreValues;
 

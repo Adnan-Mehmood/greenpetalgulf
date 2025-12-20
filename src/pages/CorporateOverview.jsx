@@ -1,7 +1,11 @@
 import React from 'react';
 import AboutSidebar from '../components/AboutSidebar';
+import PageTitle from '../components/PageTitle';
 
-const CorporateOverview = () => (
+const CorporateOverview = () => {
+  return (
+    <>
+      <PageTitle title="Corporate Overview" />
   <div className="service-details-page">
     <div className="auto-container">
       <div className="row">
@@ -38,7 +42,9 @@ const CorporateOverview = () => (
       </div>
     </div>
   </div>
+  </>
 );
+};
 
 export default CorporateOverview;
 

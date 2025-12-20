@@ -1,7 +1,11 @@
 import React from 'react';
 import AboutSidebar from '../components/AboutSidebar';
+import PageTitle from '../components/PageTitle';
 
-const VisionMission = () => (
+const VisionMission = () => {
+  return (
+    <>
+       <PageTitle title="Our Vision & Mission" />
   <div className="service-details-page">
     <div className="auto-container">
       <div className="row">
@@ -34,7 +38,9 @@ const VisionMission = () => (
       </div>
     </div>
   </div>
-);
+   </>
+  );
+};
 
 export default VisionMission;
 
