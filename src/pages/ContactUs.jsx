@@ -3,9 +3,9 @@ import PageTitle from '../components/PageTitle';
 import { contactInfo } from '../content';
 
 const ContactUs = () => (
-  <>
-    <PageTitle title="Contact Us" />
-    <section className="contact-form-section style-four">
+    <>
+      <PageTitle title="Contact Us" />
+      <section className="contact-form-section style-four">
       <div className="auto-container">
         <div className="row">
           <div className="col-lg-12">
@@ -62,41 +62,40 @@ const ContactUs = () => (
                 <form
                   name="frm_contact"
                   id="frm_contact"
-                  action="/send_email.php"
+                  action="https://formspree.io/f/mzdpgnlp"
                   method="POST"
-                  encType="multipart/form-data"
                 >
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-group">
                         <label htmlFor="txt_name">Name</label>
-                        <input type="text" name="txt_name" id="txt_name" placeholder="Name" required />
+                        <input type="text" name="Name" id="txt_name" placeholder="Name" required />
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="form-group">
                         <label htmlFor="txt_phone">Phone</label>
-                        <input type="text" name="txt_phone" id="txt_phone" placeholder="Phone" />
+                        <input type="text" name="Phone" id="txt_phone" placeholder="Phone" />
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="form-group">
                         <label htmlFor="txt_email">Email</label>
-                        <input type="email" name="txt_email" id="txt_email" placeholder="Email" required />
+                        <input type="email" name="Email" id="txt_email" placeholder="your.email@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" required />
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="form-group">
                         <label htmlFor="txt_subject">Subject</label>
-                        <input type="text" name="txt_subject" id="txt_subject" placeholder="Subject" />
+                        <input type="text" name="Subject" id="txt_subject" placeholder="Subject" />
                       </div>
                     </div>
                     <div className="col-md-12">
                       <div className="form-group">
                         <label htmlFor="txt_message">Message</label>
-                        <textarea name="txt_message" id="txt_message" placeholder="Message" />
+                        <textarea name="Message" id="txt_message" placeholder="Message" />
                         <div className="form-btn">
-                          <input id="form_botcheck" name="form_botcheck" className="form-control" type="hidden" value="" />
+                          <input id="form_botcheck" name="Contact US Form" className="form-control" type="hidden" value="" />
                           <div id="contact_msg" />
                           <button className="theme-btn btn-style-one" type="submit" data-loading-text="Please wait...">
                             <span>
@@ -112,10 +111,10 @@ const ContactUs = () => (
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  </>
+       </div>
+     </div>
+   </section>
+ </>
 );
 
 export default ContactUs;
