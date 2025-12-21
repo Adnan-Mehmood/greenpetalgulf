@@ -1,11 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { blogPages, blogNavLinks } from '../../content';
+import PageTitle from '../../components/PageTitle';
 
-const BlogsIndex = () => (
+const BlogsIndex = () => {
+  return (
+     <>
+               <PageTitle title="Blogs" />
   <div className="auto-container" style={{ padding: '60px 0' }}>
     <div className="sec-title text-center">
-      <div className="sub-title">Blogs</div>
+      {/* <div className="sub-title">Blogs</div> */}
       <h2>Latest Articles</h2>
     </div>
     <div className="row">
@@ -29,7 +33,9 @@ const BlogsIndex = () => (
       })}
     </div>
   </div>
+     </>
 );
+};
 
 export default BlogsIndex;
 
