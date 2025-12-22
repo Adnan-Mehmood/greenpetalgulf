@@ -16,6 +16,12 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  transition: 0.3s ease all;
+  
+  &.open {
+    right: 0;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
 }
 
 .hidden-sidebar-close {
@@ -67,10 +73,19 @@
   bottom: 0;
   z-index: 99999;
   width: 100%;
-  display: none;
+  // display: none;
+  opacity: 0;
   background: rgba(20, 20, 20, 0.7);
   overflow: hidden;
-  cursor: none;
+  // cursor: none;
+  transition: 0.3s ease all;
+  pointer-events: none;
+
+  &.open {
+    // display: block;
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 
 .single-brochure a:hover {

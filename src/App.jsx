@@ -14,6 +14,8 @@ import BlogsIndex from './pages/blogs/BlogsIndex';
 import BlogPageFactory from './pages/blogs/BlogPageFactory';
 import ContactUs from './pages/ContactUs';
 
+import '../public/assets/sass/main.scss';
+
 const App = () => (
   <div className="page-wrapper">
     <Header />
