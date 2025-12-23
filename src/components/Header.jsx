@@ -101,12 +101,12 @@ const Header = () => {
           <div className="inner-container">
             <div className="logo-box">
               <div className="logo">
-                <a href="/">
+                <Link to="/">
                   <img
                     src="/assets/images/gpg_logo.png"
                     alt="Green Petals Gulf LLC"
                   />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="right-column">
@@ -152,12 +152,12 @@ const Header = () => {
             <div className="inner-container">
               <div className="logo-box">
                 <div className="logo">
-                  <a href="/">
+                  <Link to="/">
                     <img
                       src="/assets/images/gpg_logo.png"
                       alt="Green Petals Gulf LLC"
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="right-column">

@@ -6,13 +6,15 @@ import {
   socialLinks,
   usefulLinks,
 } from '../content';
+import useScrollToTop from '../../hooks/useScrollToTop';
 
-const renderFooterLink = (href, label) =>
-  href.startsWith('/') ? <Link to={href}>{label}</Link> : <a href={href}>{label}</a>;
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
+  const handleNavigation = useScrollToTop();
+  const renderFooterLink = (href, label) =>
+  href.startsWith('/') ? <Link to={href} onClick={(event) => handleNavigation(event, href)}>{label}</Link> : <Link to={href} onClick={(event) => handleNavigation(event, href)}>{label}</Link>;
   return (
     <>
       <footer className="main-footer">
@@ -32,9 +34,9 @@ const Footer = () => {
                   <ul className="social-links">
                     {socialLinks.map((social) => (
                       <li key={social.icon}>
-                        <a href={social.href}>
+                        <Link to={social.href} >
                           <i className={social.icon} />
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>

@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { slides } from '../content';
+import { Link } from 'react-router-dom';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -39,9 +40,9 @@ const Banner = () => {
                 <div className="text">{slide.text}</div>
                 <h1>{slide.heading}</h1>
                 <div className="link-box">
-                  <a href="contact-us.html" className="theme-btn style-two">
+                  <Link to="contact-us" className="theme-btn style-two">
                     <span> Contact Us</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,7 +1,11 @@
 import React from 'react';
 import { newsItems } from '../content';
+import { Link } from 'react-router-dom';
+import useScrollToTop from '../../hooks/useScrollToTop';
 
-const NewsSection = () => (
+const NewsSection = () => {
+    const handleNavigation = useScrollToTop();
+    return (
   <section className="news-section default-style">
     <div className="auto-container">
       <div className="sec-title text-center">
@@ -15,17 +19,17 @@ const NewsSection = () => (
               <div className="image">
                 <img src={item.image} alt={item.title} />
                 <div className="overlay-two">
-                  <a href={item.image} className="lightbox-image" data-fancybox="gallery">
+                  <Link to={item.image} className="lightbox-image" data-fancybox="gallery">
                     <span className="fa-solid fa-magnifying-glass-plus" />
-                  </a>
-                  <a href={item.link}>
+                  </Link>
+                  <Link to={item.link} onClick={(event) => handleNavigation(event, item.link)} className="link">
                     <span className="fa-solid fa-link" />
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="lower-content">
                 <h3>
-                  <a href={item.link}>{item.title}</a>
+                  <Link to={item.link} onClick={(event) => handleNavigation(event, item.link)}>{item.title}</Link>
                 </h3>
               </div>
             </div>
@@ -34,7 +38,8 @@ const NewsSection = () => (
       </div>
     </div>
   </section>
-);
+    );
+  };
 
 export default NewsSection;
 
