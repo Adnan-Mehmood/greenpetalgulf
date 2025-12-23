@@ -62,7 +62,7 @@ const ContactUs = () => (
                 <form
                   name="frm_contact"
                   id="frm_contact"
-                  action="https://formspree.io/f/mzdpgnlp"
+                  action="https://formspree.io/f/xnjalldl"
                   method="POST"
                 >
                   <div className="row">
